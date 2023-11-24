@@ -4,26 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel ="preconnect" href = "https://fonts.gstatic.com" crossorigin>
-    <link href = "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&family+Open+sans:wght@300;400;800&family=titillium+we:wght@300;400;800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&family=Open+Sans:wght@300;400;800&family=Titillium+Web:wght@300;400;800" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&family=Open+Sans:wght@300;400;800&family=Titillium+Web:wght@300;400;800" rel="stylesheet">
     <title>Expense Tracker</title>
-
     <link rel="stylesheet" href="../css/expense_tracker.css">
-    
 </head>
 
 <body>
-    <script src = "../JS/index.js"></script>
+    <script src="../JS/index.js"></script>
     <div class="full_body">
         <div class="Title"> Expense Tracker</div>
         <div class="container">
             <div class="expenses">
-                <a href="#" class="buttons" onclick=" add_expenses_page()">Add Expenses</a>
+                <a href="#" class="buttons" onclick="add_expenses_page()">Add Expenses</a>
                 <br>
                 <div class="available-expenses">
                     <div class="sub-title">Expenses </div>
-                        <table class="expense-table" cellspacing ="10px" cellpadding="8px 20px">
-                        <tr style ="border-bottom:1px solid white">
+                    <table class="expense-table" cellspacing="10px" cellpadding="8px 20px">
+                        <tr style="border-bottom: 1px solid white">
                             <th>Expense Name</th>
                             <th>Category</th>
                             <th>Expense Amount</th>
@@ -31,14 +30,14 @@
                             <th>Action</th>
                         </tr>
                     </table>
-                    </div>
-                    <form action="#" class ="add-new-expense">
+                </div>
+                <form action="#" class="add-new-expense">
                     <span>
-                        <label for ="amount">Amount:</label>
+                        <label for="amount">Amount:</label>
                         <input type="text" class="form-input" name="amount" placeholder="How much?">
                     </span>
                     <span>
-                        <label for ="Category">Category:</label>
+                        <label for="Category">Category:</label>
                         <select name="category" id="category">
                             <option value="Utility/Bills"> Utility/Bills</option>
                             <option value="Groceries">Groceries</option>
@@ -48,53 +47,51 @@
                         </select>
                     </span>
                     <span>
-                        <label for ="Expense Date"> Date:</label>
+                        <label for="Expense Date"> Date:</label>
                         <input type="date" class="form-input" name="date" placeholder="dd/mm/yyyy">
                     </span>
                     <span>
-                        <label for ="Action">Action:</label>
+                        <label for="Action">Action:</label>
                         <input type="text" class="form-input" name="Action" placeholder="What did you spend on?">
                     </span>
                     <span>
                         <label for="currency">Currency:</label>
                         <select name="currency" id="currency">
-                            <option value="USD">USD</option>
                             <option value="EUR">EUR</option>
                             <option value="GBP">GBP</option>
+                            <option value="INR">USD</option>
+                            <option value="MZN">USD</option>
+                            <option value="USD">USD</option>
                             <option value="Other">Other</option>
                         </select>
                     </span>
                     <span>
-                        <a href="#" class="buttons" style = "font-size: 15px; padding:8px 10px;" onclick ="add_expense()">Submit</a>
+                        <a href="#" class="buttons" style="font-size: 15px; padding:8px 10px;" onclick="add_expense()">Submit</a>
                     </span>
-                </form> 
-                </div>
-                <div class="category">
-                    <a href="#" class="buttons" onclick="add_category_page()">Add Category</a>
-                    <br>
-                    <div class="sub-title">
-                        Categories</div>
-                        <div class="available-categories">
-                            <span> Utilities/Bills<span class ="sum"></span></span>
-                            <span> Groceries<span class ="sum"></span></span>
-                            <span> Transportation<span class ="sum"></span></span>
-                            <span>Entertainment<span class ="sum"></span></span>
-                            <span> Others<span class ="sum"></span></span>
-                        </div>
-                        <form action="#" class="add-category">
-                            <span>
-                                <label for ="Category"> Category Name:</label>
-                                <input type="text" class="form-input" name="new-category" placeholder="Enter category name">
-                            </span>
-                            <span>
-                                <a href="#" class="buttons" onclick="add_category()">Submit</a>
-                            </span>
-                        </form>
-                </div>
+                </form>
             </div>
-            
+            <div class="category">
+                <a href="#" class="buttons" onclick="add_category_page()">Add Category</a>
+                <br>
+                <div class="sub-title">Categories</div>
+                <div class="available-categories">
+                    <span> Utilities/Bills<span class="sum"></span></span>
+                    <span> Groceries<span class="sum"></span></span>
+                    <span> Transportation<span class="sum"></span></span>
+                    <span>Entertainment<span class="sum"></span></span>
+                    <span> Others<span class="sum"></span></span>
+                </div>
+                <form action="#" class="add-category">
+                    <span>
+                        <label for="Category"> Category Name:</label>
+                        <input type="text" class="form-input" name="new-category" placeholder="Enter category name">
+                    </span>
+                    <span>
+                        <a href="#" class="buttons" onclick="add_category()">Submit</a>
+                    </span>
+                </form>
+            </div>
         </div>
     </div>
-    
 </body>
 </html>
