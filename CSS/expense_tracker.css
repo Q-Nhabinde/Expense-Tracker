@@ -2,7 +2,7 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font: 'Open sans', "sans-serif";
+    font: 16px 'Open sans', sans-serif;
 }
 
 .full_body{
@@ -11,7 +11,7 @@ body{
     height: 800px;
 }
 
-.title{
+.Title{
     color: white;
     font-size: 30px;
     display: flex;
@@ -74,7 +74,7 @@ body{
     background-color: rgba(0,0,0,164);
     border: 1px solid white;
     outline: none;
-    font-family: 'Open sans', 'sans-serif'; 
+    font-family: 'Open sans', sans-serif; 
 
 }
 

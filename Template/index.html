@@ -9,14 +9,16 @@
     <title>Expense Tracker</title>
 
     <link rel="stylesheet" href="../css/expense_tracker.css">
+    
 </head>
 
 <body>
+    <script src = "../JS/index.js"></script>
     <div class="full_body">
         <div class="Title"> Expense Tracker</div>
         <div class="container">
             <div class="expenses">
-                <a href="#" class="buttons" on click=" add_expenses_page()">Add Expenses</a>
+                <a href="#" class="buttons" onclick=" add_expenses_page()">Add Expenses</a>
                 <br>
                 <div class="available-expenses">
                     <div class="sub-title">Expenses </div>
@@ -30,7 +32,7 @@
                         </tr>
                     </table>
                     </div>
-                    <form action="#" class ="add-new=expense">
+                    <form action="#" class ="add-new-expense">
                     <span>
                         <label for ="amount">Amount:</label>
                         <input type="text" class="form-input" name="amount" placeholder="How much?">
@@ -54,7 +56,16 @@
                         <input type="text" class="form-input" name="Action" placeholder="What did you spend on?">
                     </span>
                     <span>
-                        <a href="#" class="buttons" style = "font-size: 15px; padding:8px 10px;" onclick ="add_expense_page()">Submit</a>
+                        <label for="currency">Currency:</label>
+                        <select name="currency" id="currency">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </span>
+                    <span>
+                        <a href="#" class="buttons" style = "font-size: 15px; padding:8px 10px;" onclick ="add_expense()">Submit</a>
                     </span>
                 </form> 
                 </div>
@@ -70,7 +81,7 @@
                             <span>Entertainment<span class ="sum"></span></span>
                             <span> Others<span class ="sum"></span></span>
                         </div>
-                        <form action="#" class ="add-category">
+                        <form action="#" class="add-category">
                             <span>
                                 <label for ="Category"> Category Name:</label>
                                 <input type="text" class="form-input" name="new-category" placeholder="Enter category name">
