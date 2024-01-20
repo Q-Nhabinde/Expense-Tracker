@@ -1,8 +1,8 @@
-// categoryModule.js
+//categoryModule.js
 let count = 4;
 
-export function addNewCategory() {
-    const newCategoryValue = document.getElementsByClassName("new-category")[0].value;
+export function add_category() {
+    const newCategoryValue = document.getElementsByClassName("form-input")[0].value;
     if (newCategoryValue) {
         const dropdown = document.getElementsByClassName("available-categories")[0];
         const newCategoryOption = document.createElement("option");
@@ -12,14 +12,14 @@ export function addNewCategory() {
         const newCategorySpan = document.createElement("span");
         newCategorySpan.innerHTML = `<span>${newCategoryValue}<span class="sum"> - ${expensePerCategory[count]} ${currency} spent</span></span>`;
         dropdown.appendChild(newCategorySpan);
-        document.getElementsByClassName("add-category")[0].style.display = "none";
+        document.getElementsByClassName("add-new-expense")[0].style.display = "none";
     }
 }
 
 export function addCategoryPage() {
-    if (document.getElementsByClassName("add-category")[0].style.display === "block") {
-        document.getElementsByClassName("add-category")[0].style.display = "none";
+    if (document.getElementsByClassName("add-new-expense")[0].style.display === "block") {
+        document.getElementsByClassName("add-new-expense")[0].style.display = "none";
     } else {
-        document.getElementsByClassName("add-category")[0].style.display = "block";
+        document.getElementsByClassName("add-new-expense")[0].style.display = "block";
     }
 }

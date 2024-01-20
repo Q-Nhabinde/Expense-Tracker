@@ -1,5 +1,49 @@
 // expenseModule.js
-export const expensePerCategory = [0, 0, 0, 0, 0, 0];
+export function addExpense() {
+    const amount = document.querySelector(".form-input[name='amount']").value;
+    const date = document.querySelector(".form-input[name='date']").value;
+    const action = document.querySelector(".form-input[name='Action']").value;
+    const category = document.querySelector(".form-input[name='Category']").value;
+    const selectedCurrency = document.getElementById("currency").value;
+
+    if (amount && date && category && action) {
+        alert("Successfully added expenses!");
+
+        const table = document.querySelector(".expense-table");
+        const newRow = document.createElement("tr");
+
+        const tdAmount = document.createElement("td");
+        tdAmount.textContent = amount;
+
+        const tdCurrency = document.createElement("td");
+        tdCurrency.textContent = selectedCurrency;
+
+        const tdDate = document.createElement("td");
+        tdDate.textContent = date;
+
+        const tdAction = document.createElement("td");
+        tdAction.textContent = action;
+
+        newRow.appendChild(tdAmount);
+        newRow.appendChild(tdCurrency);
+        newRow.appendChild(tdDate);
+        newRow.appendChild(tdAction);
+
+        table.appendChild(newRow);
+
+        expensePerCategory[parseInt(category)] += parseInt(amount);
+        updateSum(selectedCurrency);
+
+        // Log or do something with 'count' if needed
+        console.log("Expense count:", expensePerCategory[parseInt(category)]);
+
+        document.querySelector(".add-new-expense").style.display = "none";
+    } else {
+        alert("Please enter all details!");
+    }
+}
+
+/*/export const expensePerCategory = [0, 0, 0, 0, 0, 0];
 
 export function updateSum(currency) {
     const sumElements = document.querySelectorAll(".sum");
@@ -35,4 +79,5 @@ export function addExpense() {
     } else {
         alert("Please enter all details!");
     }
-}
+} 
+*/
